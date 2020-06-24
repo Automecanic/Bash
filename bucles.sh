@@ -6,6 +6,8 @@ i=0
 #sera como  en java mentres i sea menor que 100
 #vigilar los espacios , da error si no estan correctos
 # es pot fer servir el doble  [[ expresio ]] per evitar errors.
+#para salir del bucle puedes poner break;
+#para continuar puedes poner continue;
 while [ $i -lt 100 ]; do #el do equivale a la llave de apertura
     # 0  es false y 1 true , si el resultado es 0 considera que es false
     #  !  invierte el resultado
@@ -54,10 +56,13 @@ do
 echo "el numero es $letra"
 done
 
+#recorre un array por su longitud 
+echo -e "\n for con longitud de array"
 for ((i=0;i<${#palabra[@]};i++))
 do
 echo "la palabra $i es ${palabra[$i]}"
 done
+
 #-----------------------------------------------#
 #-----------bucle until--------------------------#
 #------------------------------------------------#
