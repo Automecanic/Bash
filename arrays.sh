@@ -1,5 +1,6 @@
 #!/bin/bash
 #Nom del programa: arrays
+#---------
 #para declarar un array se puede hacer de diferentes formas
 #Bash no admite los arrays multidimensionales
 #
