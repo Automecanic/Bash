@@ -6,7 +6,8 @@
 
 arr1=(uno dos tres cuatro cinco)
 declare -a arr2=(seis siete ocho nueve)
-arr3[0]=diez;arr3[1]=once
+arr3[0]=diez
+arr3[1]=once
 arr4=('doce' 'trece' 'catorce')
 
 #para poner espacios en los elementos se ponen con las comas o con la contrabarra
@@ -31,11 +32,10 @@ echo ${arr2[2]}
 #Salida: ocho
 
 #para recorrer el array uno a uno se utilizara el for como siempre
-#Las comillas no son necesarias  pero en este caso se pone entre comillas para que respete los espacios indicados 
+#Las comillas no son necesarias  pero en este caso se pone entre comillas para que respete los espacios indicados
 #con la trontrabarra. Si no imprimirá cada palabra en una linia
-for i in "${arr5[@]}"
-do
-echo $i
+for i in "${arr5[@]}"; do
+    echo $i
 done
 #Salida:
 #son palabras difrentes
@@ -48,12 +48,12 @@ echo ${#arr4[@]}
 #-----------acciones con arrays-----------------#
 #------------------------------------------------#
 
-#para agregar elemento al principio del  array se pone el elemnto  
+#para agregar elemento al principio del  array se pone el elemnto
 arr1=(cero "${arr1[@]}")
 echo "${arr1[@]}"
 #Salida: cero uno dos tres cuatro cinco
 
-#si quieres ponerlo al final seria 
+#si quieres ponerlo al final seria
 arr1=("${arr1[@]}" seis)
 echo "${arr1[@]}"
 #Salida: cero uno dos tres cuatro cinco seis
@@ -79,7 +79,7 @@ echo "${arr1[4]}"
 arr1=(${arr1[@]/cinco/ocho})
 echo "${arr1[@]}"
 #Salida: cero uno dos tres cuatro ocho seis
-#de esta manera podemos poner arr1=(${arr1[@]/cinco/}) con lo que 
+#de esta manera podemos poner arr1=(${arr1[@]/cinco/}) con lo que
 #substituiremos el cinco por nada.
 
 #para borrar un array podemos utilizar  el unset nom_array
