@@ -67,5 +67,10 @@ funcion5(){
 funcion5
 funcion5 23
 
+# Podemos utiliar alguna otra funcion que este en otro archivo
+#con source le decimos que ejecute el arshico funcionesPrueva  y
+#llamamos a la funcione.
+source ./funcionPrueva.sh
+echo $(sumar  6 2)
 
-#####
+####
